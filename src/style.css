@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* 🎨 Theme Variables */
+@theme {
+  --color-medical-blue: 37 99 235;
+  --color-teal: 20 184 166;
+  --color-soft-light: 249 250 251;
+  --color-success: 16 185 129; /* #10b981 */
+  --color-danger: 239 68 68; /* #ef4444 */
+
+  /* Font */
+  --font-sans: "Cairo", sans-serif;
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+}
+
+.dark {
+  --color-medical-blue: 59 130 246;
+  --color-teal: 45 212 191;
+  --color-soft-light: 17 24 39;
+  color-scheme: dark;
+}
+.footer-link {
+  @apply text-sm text-gray-600 dark:text-gray-300 transition-colors;
+}
+
+.social-icon {
+  @apply text-gray-600 dark:text-gray-300 hover:text-medical-blue dark:hover:text-medical-blue transition-colors;
+}
+/* 🧩 Components */
+@utility btn-primary {
+  @apply bg-[rgb(var(--color-medical-blue))]
+         text-white
+         px-4 py-2
+         rounded-lg
+         transition
+         transform
+         hover:scale-105
+         hover:bg-[rgb(var(--color-teal))];
+}
+
+@utility card {
+  @apply bg-white
+         dark:bg-gray-800
+         rounded-lg
+         shadow-md
+         hover:shadow-xl
+         transition;
+}
+.footer-link {
+  @apply text-gray-600 dark:text-gray-300 hover:text-medical-blue dark:hover:text-medical-blue transition text-sm;
+}
+
+.social-icon {
+  @apply p-2 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:bg-medical-blue hover:text-white transition;
+}
+
+.specialty-card {
+  @apply bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition transform hover:-translate-y-1 cursor-pointer;
+}
+
+.feature-icon {
+  @apply w-16 h-16 bg-medical-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 text-medical-blue;
+}
+
+.testimonial-card {
+  @apply bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition;
+}
+
+.pharmacy-card {
+  @apply bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition overflow-hidden;
+}
+
+.action-button {
+  @apply flex items-center justify-center p-2 rounded-lg transition transform hover:scale-105;
+}
+
+.footer-link {
+  @apply text-sm text-gray-600 dark:text-gray-300 hover:text-medical-blue dark:hover:text-medical-blue transition-colors;
+}
+
+.social-icon {
+  @apply text-gray-600 dark:text-gray-300 hover:text-medical-blue dark:hover:text-medical-blue transition-colors;
+}
+
+.nav-link {
+  @apply text-gray-700 dark:text-gray-200 hover:text-medical-blue dark:hover:text-medical-blue transition px-3 py-2 text-sm font-medium;
+}
+
+.mobile-nav-link {
+  @apply block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-200 hover:text-medical-blue dark:hover:text-medical-blue hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md;
+}
+.doctor-card {
+  @apply bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl transition overflow-hidden;
+}
+
+.time-badge {
+  @apply px-2 py-1 bg-medical-blue/10 text-medical-blue dark:bg-medical-blue/20  text-xs rounded;
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active .relative,
+.modal-leave-active .relative {
+  transition: transform 0.3s ease;
+}
+
+.modal-enter-from .relative,
+.modal-leave-to .relative {
+  transform: scale(0.9);
+}
+@utility input-field {
+  @apply w-full
+         p-2
+         border
+         rounded-lg
+         dark:bg-gray-700
+         dark:border-gray-600
+         dark:text-white
+         focus:ring-2
+         focus:ring-[rgb(var(--color-medical-blue))]
+         focus:border-transparent;
+}
+
+/* 🎬 Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

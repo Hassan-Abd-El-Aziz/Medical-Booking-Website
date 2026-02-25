@@ -1,0 +1,76 @@
+{
+  "doctors": [
+    {
+      "id": 1,
+      "name": "د. أحمد محمد",
+      "specialty": "قلب",
+      "experience": 15,
+      "rating": 4.8,
+      "clinicAddress": "القاهرة - مصر الجديدة",
+      "phone": "+201234567890",
+      "whatsappNumber": "201234567890",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400",
+      "availableTimes": ["9:00 ص", "10:00 ص", "11:00 ص", "1:00 م", "2:00 م"]
+    },
+    {
+      "id": 2,
+      "name": "د. سارة علي",
+      "specialty": "أطفال",
+      "experience": 10,
+      "rating": 4.9,
+      "clinicAddress": "الجيزة - المهندسين",
+      "phone": "+201234567891",
+      "whatsappNumber": "201234567891",
+      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400",
+      "availableTimes": ["10:00 ص", "11:30 ص", "1:00 م", "3:00 م"]
+    },
+    {
+      "id": 3,
+      "name": "د. محمد عبدالله",
+      "specialty": "عظام",
+      "experience": 20,
+      "rating": 4.7,
+      "clinicAddress": "الإسكندرية - سموحة",
+      "phone": "+201234567892",
+      "whatsappNumber": "201234567892",
+      "image": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400",
+      "availableTimes": ["11:00 ص", "12:00 م", "2:00 م", "4:00 م"]
+    },
+    {
+      "id": 4,
+      "name": "د. فاطمة حسن",
+      "specialty": "جلدية",
+      "experience": 8,
+      "rating": 4.6,
+      "clinicAddress": "القاهرة - المعادي",
+      "phone": "+201234567893",
+      "whatsappNumber": "201234567893",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400",
+      "availableTimes": ["9:30 ص", "11:00 ص", "1:30 م", "3:30 م"]
+    },
+    {
+      "id": 5,
+      "name": "د. خالد عمر",
+      "specialty": "أعصاب",
+      "experience": 12,
+      "rating": 4.9,
+      "clinicAddress": "الجيزة - الدقي",
+      "phone": "+201234567894",
+      "whatsappNumber": "201234567894",
+      "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400",
+      "availableTimes": ["10:30 ص", "12:00 م", "2:30 م", "4:30 م"]
+    },
+    {
+      "id": 6,
+      "name": "د. نورا أحمد",
+      "specialty": "نساء وتوليد",
+      "experience": 15,
+      "rating": 4.8,
+      "clinicAddress": "القاهرة - مدينة نصر",
+      "phone": "+201234567895",
+      "whatsappNumber": "201234567895",
+      "image": "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=400",
+      "availableTimes": ["11:00 ص", "1:00 م", "3:00 م", "5:00 م"]
+    }
+  ]
+}

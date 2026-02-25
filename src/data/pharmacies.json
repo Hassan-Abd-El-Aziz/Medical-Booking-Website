@@ -1,0 +1,58 @@
+{
+  "pharmacies": [
+    {
+      "id": 1,
+      "name": "صيدلية العزبي",
+      "address": "القاهرة - مصر الجديدة",
+      "phone": "+201234567890",
+      "whatsappNumber": "201234567890",
+      "mapLink": "https://goo.gl/maps/example1",
+      "image": "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400"
+    },
+    {
+      "id": 2,
+      "name": "صيدلية سيف",
+      "address": "الجيزة - المهندسين",
+      "phone": "+201234567891",
+      "whatsappNumber": "201234567891",
+      "mapLink": "https://goo.gl/maps/example2",
+      "image": "https://images.unsplash.com/photo-1576671081837-49000212a370?w=400"
+    },
+    {
+      "id": 3,
+      "name": "صيدلية النصر",
+      "address": "الإسكندرية - سموحة",
+      "phone": "+201234567892",
+      "whatsappNumber": "201234567892",
+      "mapLink": "https://goo.gl/maps/example3",
+      "image": "https://images.unsplash.com/photo-1576671081837-49000212a370?w=400"
+    },
+    {
+      "id": 4,
+      "name": "صيدلية الدواء",
+      "address": "القاهرة - المعادي",
+      "phone": "+201234567893",
+      "whatsappNumber": "201234567893",
+      "mapLink": "https://goo.gl/maps/example4",
+      "image": "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400"
+    },
+    {
+      "id": 5,
+      "name": "صيدلية العاصمة",
+      "address": "الجيزة - الدقي",
+      "phone": "+201234567894",
+      "whatsappNumber": "201234567894",
+      "mapLink": "https://goo.gl/maps/example5",
+      "image": "https://images.unsplash.com/photo-1576671081837-49000212a370?w=400"
+    },
+    {
+      "id": 6,
+      "name": "صيدلية الرحمة",
+      "address": "القاهرة - مدينة نصر",
+      "phone": "+201234567895",
+      "whatsappNumber": "201234567895",
+      "mapLink": "https://goo.gl/maps/example6",
+      "image": "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400"
+    }
+  ]
+}
