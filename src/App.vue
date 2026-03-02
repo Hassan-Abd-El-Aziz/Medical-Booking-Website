@@ -3,7 +3,7 @@
   <div
     :class="[
       theme,
-      'min-h-screen bg-soft-light dark:bg-gray-900 transition-colors duration-300',
+      'min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300',
     ]"
   >
     <Navbar @toggle-theme="toggleTheme" :theme="theme" />

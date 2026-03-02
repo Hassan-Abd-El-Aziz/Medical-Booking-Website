@@ -1,7 +1,7 @@
 <!-- components/Navbar.vue -->
 <template>
   <nav
-    class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md transition-colors duration-300"
+    class="sticky top-0 z-50 bg-cyan-500/50 backdrop-blur-sm shadow-sm border-b border-cyan-100"
     dir="rtl"
   >
     <div class="container mx-auto px-4">
@@ -9,9 +9,7 @@
         <!-- Logo -->
         <router-link to="/" class="flex items-center space-x-2">
           <img src="../assets/help.png" alt="Medical Booking" class="h-8 w-8" />
-          <span class="text-xl font-bold text-medical-blue dark:text-white"
-            >Shifaa</span
-          >
+          <span class="text-xl font-bold text-cyan-100">Shifaa</span>
         </router-link>
 
         <!-- Desktop Menu -->
@@ -19,44 +17,35 @@
           <router-link
             to="/"
             class="nav-link"
-            active-class="text-medical-blue font-semibold"
+            active-class="text-cyan-700 font-semibold"
             >الرئيسية</router-link
           >
           <router-link
             to="/doctors"
             class="nav-link"
-            active-class="text-medical-blue font-semibold"
+            active-class="text-cyan-700 font-semibold"
             >الأطباء</router-link
           >
           <router-link
             to="/pharmacies"
             class="nav-link"
-            active-class="text-medical-blue font-semibold"
+            active-class="text-cyan-700 font-semibold"
             >الصيدليات</router-link
           >
           <router-link
             to="/contact"
             class="nav-link"
-            active-class="text-medical-blue font-semibold"
+            active-class="text-cyan-700 font-semibold"
             >اتصل بنا</router-link
           >
         </div>
 
         <!-- Right Section -->
         <div class="flex items-center space-x-4">
-          <!-- Dark Mode Toggle -->
-          <button
-            @click="toggleTheme"
-            class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition"
-          >
-            <SunIcon v-if="isDark" class="h-5 w-5 text-yellow-500" />
-            <MoonIcon v-else class="h-5 w-5 text-gray-600" />
-          </button>
-
           <!-- Mobile Menu Button -->
           <button
             @click="isOpen = !isOpen"
-            class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+            class="md:hidden p-2 rounded-lg hover:bg-cyan-100 text-cyan-700"
           >
             <Bars3Icon class="h-6 w-6" />
           </button>
@@ -72,7 +61,10 @@
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-2"
       >
-        <div v-if="isOpen" class="md:hidden py-4 border-t dark:border-gray-700">
+        <div
+          v-if="isOpen"
+          class="md:hidden py-4 border-t border-cyan-100 bg-cyan-50"
+        >
           <div class="flex flex-col space-y-3">
             <router-link @click="isOpen = false" to="/" class="mobile-nav-link"
               >الرئيسية</router-link
@@ -103,33 +95,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import { SunIcon, MoonIcon, Bars3Icon } from "@heroicons/vue/24/outline";
+import { ref } from "vue";
+import { Bars3Icon } from "@heroicons/vue/24/outline";
 
 const isOpen = ref(false);
-const isDark = ref(false);
-
-const toggleTheme = () => {
-  isDark.value = !isDark.value;
-  if (isDark.value) {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
-};
-
-onMounted(() => {
-  const savedTheme = localStorage.getItem("theme");
-  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  if (savedTheme === "dark" || (!savedTheme && systemDark)) {
-    isDark.value = true;
-    document.documentElement.classList.add("dark");
-  } else {
-    isDark.value = false;
-    document.documentElement.classList.remove("dark");
-  }
-});
 </script>

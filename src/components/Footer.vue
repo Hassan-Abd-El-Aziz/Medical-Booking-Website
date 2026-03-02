@@ -1,24 +1,19 @@
 <!-- components/Footer.vue -->
 <template>
-  <footer
-    class="bg-white dark:bg-gray-800 border-t dark:border-gray-700 mt-auto"
-    dir="rtl"
-  >
+  <footer class="bg-white border-t border-cyan-100 mt-auto" dir="rtl">
     <div class="container mx-auto px-4 py-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- About -->
         <div>
-          <h3 class="text-lg font-semibold mb-4 dark:text-white">عن الموقع</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">عن الموقع</h3>
+          <p class="text-gray-600 text-sm">
             منصة طبية متكاملة لحجز المواعيد مع أفضل الأطباء والصيدليات في مصر
           </p>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h3 class="text-lg font-semibold mb-4 dark:text-white">
-            روابط سريعة
-          </h3>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">روابط سريعة</h3>
           <ul class="space-y-2">
             <li>
               <router-link to="/" class="footer-link">الرئيسية</router-link>
@@ -43,10 +38,10 @@
 
         <!-- Contact Info -->
         <div>
-          <h3 class="text-lg font-semibold mb-4 dark:text-white">
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">
             معلومات الاتصال
           </h3>
-          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+          <ul class="space-y-2 text-sm text-gray-600">
             <li class="flex items-center">
               <MapPinIcon class="w-4 h-4 ml-2" />
               القاهرة، مصر
@@ -64,7 +59,7 @@
 
         <!-- Social Media -->
         <div>
-          <h3 class="text-lg font-semibold mb-4 dark:text-white">تابعنا</h3>
+          <h3 class="text-lg font-semibold mb-4 text-gray-900">تابعنا</h3>
           <div class="flex space-x-4">
             <a href="#" class="social-icon">
               <svg
@@ -126,7 +121,7 @@
 
       <!-- Copyright -->
       <div
-        class="border-t dark:border-gray-700 mt-8 pt-6 text-center text-sm text-gray-600 dark:text-gray-400"
+        class="border-t border-gray-200 mt-8 pt-6 text-center text-sm text-gray-600"
       >
         <p>جميع الحقوق محفوظة &copy; {{ new Date().getFullYear() }} - شفاء</p>
       </div>

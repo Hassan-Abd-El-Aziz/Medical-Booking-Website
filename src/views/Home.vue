@@ -1,5 +1,5 @@
 <template>
-  <div dir="rtl">
+  <div dir="rtl" class="bg-cyan-50 min-h-screen">
     <!-- Hero Section -->
     <section class="relative h-screen max-h-[600px] overflow-hidden">
       <div
@@ -17,7 +17,7 @@
           class="w-full h-full object-cover"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-r from-gray-700/70 to-gray-800/70"
+          class="absolute inset-0 bg-gradient-to-r from-cyan-900/70 to-blue-900/70"
         ></div>
       </div>
 
@@ -29,7 +29,7 @@
           <p class="text-xl mb-8">خدمة طبية متميزة على مدار الساعة</p>
           <button
             @click="scrollToSpecialties"
-            class="bg-white text-medical-blue px-8 py-3 rounded-full font-semibold hover:bg-medical-blue hover:text-white transition transform hover:scale-105"
+            class="bg-white text-cyan-700 px-8 py-3 rounded-full font-semibold hover:bg-cyan-600 hover:text-white transition transform hover:scale-105 shadow-lg"
           >
             احجز الآن
           </button>
@@ -38,10 +38,10 @@
     </section>
 
     <!-- Specialties Grid -->
-    <section id="specialties" class="py-16 bg-gray-50 dark:bg-gray-800">
+    <section id="specialties" class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-12 dark:text-white"
+          class="text-3xl font-bold text-center mb-12 text-gray-800"
           data-aos="fade-up"
         >
           التخصصات الطبية
@@ -50,25 +50,27 @@
           <div
             v-for="specialty in specialties"
             :key="specialty.name"
-            class="specialty-card"
+            class="specialty-card bg-cyan-50 rounded-xl p-6 text-center hover:shadow-lg transition duration-300 border border-cyan-100"
             data-aos="zoom-in"
             :data-aos-delay="specialty.delay"
           >
             <component
               :is="specialty.icon"
-              class="w-12 h-12 text-primary mb-3"
+              class="w-12 h-12 text-cyan-600 mb-3 mx-auto"
             />
-            <span class="text-sm font-medium">{{ specialty.name }}</span>
+            <span class="text-sm font-medium text-gray-700">{{
+              specialty.name
+            }}</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Featured Doctors -->
-    <section class="py-16">
+    <section class="py-16 bg-cyan-50">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-12 dark:text-white"
+          class="text-3xl font-bold text-center mb-12 text-gray-800"
           data-aos="fade-up"
         >
           أطباء مميزون
@@ -85,10 +87,10 @@
     </section>
 
     <!-- Featured Pharmacies -->
-    <section class="py-16 bg-white dark:bg-gray-800">
+    <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-12 dark:text-white"
+          class="text-3xl font-bold text-center mb-12 text-gray-800"
           data-aos="fade-up"
         >
           صيدليات مميزة
@@ -105,10 +107,10 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="py-16">
+    <section class="py-16 bg-cyan-50">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-12 dark:text-white"
+          class="text-3xl font-bold text-center mb-12 text-gray-800"
           data-aos="fade-up"
         >
           لماذا تختارنا؟
@@ -120,13 +122,15 @@
             class="text-center"
             data-aos="fade-up"
           >
-            <div class="feature-icon">
+            <div
+              class="feature-icon bg-white p-4 rounded-full inline-block mb-4 shadow-sm text-cyan-600"
+            >
               <component :is="feature.icon" class="w-8 h-8" />
             </div>
-            <h3 class="text-xl font-semibold mb-2 dark:text-white">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
               {{ feature.title }}
             </h3>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-gray-600">
               {{ feature.description }}
             </p>
           </div>
@@ -135,10 +139,10 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-16 bg-white dark:bg-gray-800">
+    <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <h2
-          class="text-3xl font-bold text-center mb-12 dark:text-white"
+          class="text-3xl font-bold text-center mb-12 text-gray-800"
           data-aos="fade-up"
         >
           آراء العملاء
@@ -147,7 +151,7 @@
           <div
             v-for="testimonial in testimonials"
             :key="testimonial.id"
-            class="testimonial-card"
+            class="testimonial-card bg-cyan-50 p-6 rounded-xl shadow-sm border border-cyan-100"
             data-aos="fade-up"
           >
             <div class="flex items-center mb-4">
@@ -157,7 +161,7 @@
                 class="w-12 h-12 rounded-full object-cover ml-4"
               />
               <div>
-                <h4 class="font-semibold dark:text-white">
+                <h4 class="font-semibold text-gray-800">
                   {{ testimonial.name }}
                 </h4>
                 <div class="flex">
@@ -174,7 +178,7 @@
                 </div>
               </div>
             </div>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-gray-600">
               {{ testimonial.comment }}
             </p>
           </div>
